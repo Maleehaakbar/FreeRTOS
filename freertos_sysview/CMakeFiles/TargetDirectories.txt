@@ -1,0 +1,14 @@
+/home/mod/Desktop/stm32/freertos_sysview/CMakeFiles/freertos_sysview.dir
+/home/mod/Desktop/stm32/freertos_sysview/CMakeFiles/edit_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/CMakeFiles/rebuild_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+/home/mod/Desktop/stm32/freertos_sysview/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/CMakeFiles/freertos_kernel.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/CMakeFiles/edit_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/CMakeFiles/rebuild_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/include/CMakeFiles/edit_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/include/CMakeFiles/rebuild_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/portable/CMakeFiles/edit_cache.dir
+/home/mod/Desktop/stm32/freertos_sysview/FreeRTOS/portable/CMakeFiles/rebuild_cache.dir
