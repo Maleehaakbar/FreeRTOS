@@ -51,31 +51,15 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+
 /* USER CODE BEGIN PFP */
 extern  void SEGGER_UART_init(uint32_t);
+void task_1( void * pvParameters);
+void task_2( void * pvParameters);
 /* USER CODE END PFP */
-
+ 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void task_1( void * pvParameters){
-const char* string = " task_\n";
-
-  while(1){
-  SEGGER_SYSVIEW_PrintfTarget(string); 
-  taskYIELD();
-  }
-
-}
-
-void task_2( void * pvParameters){
- const char* str = " task_2\n";
-  while(1){
-
-  SEGGER_SYSVIEW_PrintfTarget(str);         //each task run for 62.ms if f=16mhz
-   taskYIELD();
-  }
-
-}
 
 /* USER CODE END 0 */
 
@@ -115,7 +99,7 @@ int main(void)
 
   DWT_CTRL |= ( 1 << 0);
 
-  SEGGER_UART_init(115200);
+  SEGGER_UART_init(250000);
   SEGGER_SYSVIEW_Conf();
 
   xTaskCreate(task_1,"task1",100,(void*)1,priority,&handle_1);
@@ -230,6 +214,31 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void task_1( void * pvParameters){
+
+const char* string = " LED_1\n";
+configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+
+  while(1){
+    SEGGER_SYSVIEW_PrintfTarget(string); 
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_2);
+    vTaskDelay(pdMS_TO_TICKS(2000));
+  }
+
+}
+
+void task_2( void * pvParameters){
+
+const char* str = " LED_2\n";
+configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+
+  while(1){
+    SEGGER_SYSVIEW_PrintfTarget(str);   
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_3);
+    vTaskDelay(pdMS_TO_TICKS(2000));
+  }
+
+}
 
 /* USER CODE END 4 */
 
