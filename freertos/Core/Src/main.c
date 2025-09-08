@@ -59,32 +59,12 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+void task_1( void * pvParameters);
+void task_2( void * pvParameters);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void task_1( void * pvParameters){
-const char* string = " task_\n";
- 
-  while(1){
-//  printf("task_1\n");
-  
-  SEGGER_SYSVIEW_PrintfTarget(string); 
-  taskYIELD();
-  }
-
-}
-
-void task_2( void * pvParameters){
- const char* str = " task_2\n";
-  while(1){
-//  printf("task_2\n");
- SEGGER_SYSVIEW_PrintfTarget(str);         //each task run for 62.ms if f=16mhz
-   taskYIELD();
-  }
-
-}
 
 /* USER CODE END 0 */
 
@@ -267,6 +247,33 @@ int __io_putchar(int ch)
 {
 	HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
 	return ch;
+}
+
+void task_1( void * pvParameters){
+
+configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+const char* string = " task_1\n";
+ 
+  while(1){
+
+    SEGGER_SYSVIEW_PrintfTarget(string); 
+    HAL_Delay(100);
+
+  }
+}
+
+void task_2( void * pvParameters){
+ 
+  configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+  const char* str = " task_2\n";
+ 
+  while(1){
+
+    SEGGER_SYSVIEW_PrintfTarget(str);         //each task run for 62.ms if f=16mhz
+    HAL_Delay(100);
+
+  }
+
 }
 
 /* USER CODE END 4 */
