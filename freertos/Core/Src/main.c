@@ -257,7 +257,7 @@ const char* string = " task_1\n";
   while(1){
 
     SEGGER_SYSVIEW_PrintfTarget(string); 
-    HAL_Delay(100);
+    vTaskDelete(NULL);
 
   }
 }
@@ -270,8 +270,7 @@ void task_2( void * pvParameters){
   while(1){
 
     SEGGER_SYSVIEW_PrintfTarget(str);         //each task run for 62.ms if f=16mhz
-    HAL_Delay(100);
-
+    vTaskDelete(NULL);
   }
 
 }
