@@ -65,7 +65,8 @@ void task_2( void * pvParameters);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+TaskHandle_t handle_1 = NULL;
+TaskHandle_t handle_2 = NULL;
 /* USER CODE END 0 */
 
 /**
@@ -100,8 +101,6 @@ int main(void)
   MX_USART2_UART_Init();
   
   /* USER CODE BEGIN 2 */
-  TaskHandle_t handle_1 = NULL;
-  TaskHandle_t handle_2 = NULL;
   UBaseType_t priority = 1;
 
   DWT_CTRL |= ( 1 << 0);
@@ -257,7 +256,8 @@ const char* string = " task_1\n";
   while(1){
 
     SEGGER_SYSVIEW_PrintfTarget(string); 
-    vTaskDelete(NULL);
+    xTaskNotifyGive(handle_2);
+    vTaskDelay(pdMS_TO_TICKS(100));
 
   }
 }
@@ -269,8 +269,9 @@ void task_2( void * pvParameters){
  
   while(1){
 
-    SEGGER_SYSVIEW_PrintfTarget(str);         //each task run for 62.ms if f=16mhz
-    vTaskDelete(NULL);
+    ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
+    SEGGER_SYSVIEW_PrintfTarget(str);   
+    vTaskDelay(pdMS_TO_TICKS(100));
   }
 
 }

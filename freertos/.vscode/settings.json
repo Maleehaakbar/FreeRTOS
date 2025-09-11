@@ -1,6 +1,7 @@
 {
     "idf.port": "/dev/ttyACM0",
     "files.associations": {
-        "freertos.h": "c"
+        "freertos.h": "c",
+        "stm32f4xx.h": "c"
     }
 }
