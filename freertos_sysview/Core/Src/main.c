@@ -21,10 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-//#include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
-
+#include "timers.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +33,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define ULONG_MAX   0xFFFFFFFF
+#define DWT_CTRL    (*(volatile uint32_t*)0xE0001000)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,19 +45,19 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
- #define DWT_CTRL    (*(volatile uint32_t*)0xE0001000)
+TaskHandle_t handle_1 = NULL;
+TaskHandle_t handle_2 = NULL;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-
 /* USER CODE BEGIN PFP */
 extern  void SEGGER_UART_init(uint32_t);
 void task_1( void * pvParameters);
 void task_2( void * pvParameters);
 /* USER CODE END PFP */
- 
+
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
@@ -93,8 +93,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  TaskHandle_t handle_1 = NULL;
-  TaskHandle_t handle_2 = NULL;
   UBaseType_t priority = 1;
 
   DWT_CTRL |= ( 1 << 0);
@@ -208,38 +206,64 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 6, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+void IRQ_handle(void){
+  
+  traceISR_ENTER();
+  BaseType_t xHigherPriorityTaskWoken;
+  xHigherPriorityTaskWoken =  pdFALSE;
+  if(handle_1 !=NULL){
+  xTaskNotifyFromISR(handle_1,0,eNoAction,&xHigherPriorityTaskWoken);
+  }
+  if (xHigherPriorityTaskWoken) {
+    SEGGER_SYSVIEW_PrintfTarget("About to yield from ISR\n");
+}
+  portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+  traceISR_EXIT();
+  
+}
+
 void task_1( void * pvParameters){
 
-const char* string = " LED_1\n";
 configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
-
+const char* string = " task_1\n";
+const char* str_test = " task_test\n";
+ 
   while(1){
+    SEGGER_SYSVIEW_PrintfTarget(str_test); 
+    xTaskNotifyWait(0,0,NULL, portMAX_DELAY);
     SEGGER_SYSVIEW_PrintfTarget(string); 
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_2);
-    vTaskDelay(pdMS_TO_TICKS(2000));
-  }
+    xTaskNotify(handle_2, 1<<0, eSetBits);
+    vTaskDelay(pdMS_TO_TICKS(100));
 
+  }
 }
 
 void task_2( void * pvParameters){
-
-const char* str = " LED_2\n";
-configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
-
+ 
+  configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
+  const char* str = " task_2\n";
+  uint32_t notify_value;
   while(1){
+
+    xTaskNotifyWait(0,ULONG_MAX,&notify_value, portMAX_DELAY);
+
+    if((notify_value & 0x01) == 0x1){
     SEGGER_SYSVIEW_PrintfTarget(str);   
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_3);
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    }
+    vTaskDelay(pdMS_TO_TICKS(100));
   }
 
 }
-
 /* USER CODE END 4 */
 
 /**
