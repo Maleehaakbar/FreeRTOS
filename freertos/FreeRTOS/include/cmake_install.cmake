@@ -1,4 +1,4 @@
-# Install script for directory: /home/mod/Desktop/stm32/freertos/FreeRTOS/include
+# Install script for directory: /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

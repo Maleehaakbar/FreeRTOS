@@ -1,4 +1,4 @@
-# Install script for directory: /home/mod/Desktop/stm32/freertos/FreeRTOS
+# Install script for directory: /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mod/Desktop/stm32/freertos/FreeRTOS/include/cmake_install.cmake")
+  include("/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/cmake_install.cmake")
+  include("/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/cmake_install.cmake")
 endif()
 

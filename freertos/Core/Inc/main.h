@@ -31,11 +31,46 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+#include <stdio.h>
+#include <string.h>
 
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+#define NUM_TIMERS 2
+extern QueueHandle_t xQueue1, xQueue2;  //queue 1 for receiving user data, queue 2 for print task
+extern UART_HandleTypeDef huart2;
+extern RTC_HandleTypeDef hrtc;
+
+extern TaskHandle_t handle_menu_task;
+extern TaskHandle_t handle_cmd_task ;
+extern TaskHandle_t handle_print_task ;
+extern TaskHandle_t handle_LED_task;
+extern TaskHandle_t handle_RTC_task;
+
+extern TimerHandle_t xTimers[ NUM_TIMERS ];
+
+typedef struct cmd
+{
+	uint8_t payload[10];
+	uint32_t len;
+}command_t;
+
+typedef enum
+{
+	MainMenu = 0,
+	Led_state,
+	RtcMenu,
+  RtcTimeConfig,
+	RtcReport,
+}state_t;
+
+extern state_t curr_state;
 
 /* USER CODE END ET */
 
@@ -53,7 +88,14 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+void menu_task(void *parameters);
+void cmd_task(void *parameters);
+void print_task(void *parameters);
+void LED_task(void *parameters);
+void RTC_task(void *parameters);
 
+void LED_control_1();
+void LED_control_2();
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -73,6 +115,9 @@ void Error_Handler(void);
 #define SWO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+#define HOUR_CONFIG     1
+#define MINUTES_CONFIG  2
+#define SECONDS_CONFIG  3
 
 /* USER CODE END Private defines */
 

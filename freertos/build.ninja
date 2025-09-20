@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/mod/Desktop/stm32/freertos/
+cmake_ninja_workdir = /home/mod/Desktop/stm32/Git_folder/freertos/
 # =============================================================================
 # Object build statements for EXECUTABLE target freertos
 
@@ -49,69 +49,155 @@ cmake_ninja_workdir = /home/mod/Desktop/stm32/freertos/
 
 build cmake_object_order_depends_target_freertos: phony || cmake_object_order_depends_target_STM32_Drivers cmake_object_order_depends_target_freertos_kernel cmake_object_order_depends_target_freertos_kernel_port
 
-build CMakeFiles/freertos.dir/Core/Src/main.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/main.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/main.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/main.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/stm32f4xx_it.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_it.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/stm32f4xx_it.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/stm32f4xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/stm32f4xx_hal_msp.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_msp.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/stm32f4xx_hal_msp.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/stm32f4xx_hal_timebase_tim.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/stm32f4xx_hal_timebase_tim.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/Core/Src/sysmem.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/sysmem.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/sysmem.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/sysmem.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/Core/Src/syscalls.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/syscalls.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/Core/Src/syscalls.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/syscalls.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/Core/Src/syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Core/Src
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/startup_stm32f401xe.s.obj: ASM_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/startup_stm32f401xe.s || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/startup_stm32f401xe.s.obj: ASM_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/startup_stm32f401xe.s || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/startup_stm32f401xe.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
-build CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/portable/MemMang/heap_4.c || cmake_object_order_depends_target_freertos
+build CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/MemMang/heap_4.c || cmake_object_order_depends_target_freertos
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
   DEP_FILE = CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
   OBJECT_DIR = CMakeFiles/freertos.dir
   OBJECT_FILE_DIR = CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/Config
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/OS/SEGGER_SYSVIEW_FreeRTOS.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS/SEGGER_SYSVIEW_FreeRTOS.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/OS/SEGGER_SYSVIEW_FreeRTOS.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/OS
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_SYSVIEW.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER/SEGGER_SYSVIEW.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_SYSVIEW.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/SEGGER
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER/SEGGER_RTT.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/SEGGER
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_printf.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER/SEGGER_RTT_printf.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_printf.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/SEGGER
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c.obj: C_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/SEGGER/Syscalls
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
+
+build CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.obj: ASM_COMPILER__freertos_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S || cmake_object_order_depends_target_freertos
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DprojCOVERAGE_TEST=0
+  DEP_FILE = CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc
+  OBJECT_DIR = CMakeFiles/freertos.dir
+  OBJECT_FILE_DIR = CMakeFiles/freertos.dir/Systemview/SEGGER
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
+  TARGET_PDB = freertos.pdb
 
 
 # =============================================================================
@@ -121,21 +207,22 @@ build CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: C_COMPILER
 #############################################
 # Link the executable freertos.elf
 
-build freertos.elf: C_EXECUTABLE_LINKER__freertos_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj CMakeFiles/freertos.dir/Core/Src/main.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj CMakeFiles/freertos.dir/Core/Src/sysmem.c.obj CMakeFiles/freertos.dir/Core/Src/syscalls.c.obj CMakeFiles/freertos.dir/startup_stm32f401xe.s.obj CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj | FreeRTOS/libfreertos_kernel.a || FreeRTOS/libfreertos_kernel.a FreeRTOS/portable/freertos_kernel_port cmake/stm32cubemx/STM32_Drivers
+build freertos.elf: C_EXECUTABLE_LINKER__freertos_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj CMakeFiles/freertos.dir/Core/Src/main.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_it.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_msp.c.obj CMakeFiles/freertos.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj CMakeFiles/freertos.dir/Core/Src/sysmem.c.obj CMakeFiles/freertos.dir/Core/Src/syscalls.c.obj CMakeFiles/freertos.dir/startup_stm32f401xe.s.obj CMakeFiles/freertos.dir/FreeRTOS/portable/MemMang/heap_4.c.obj CMakeFiles/freertos.dir/Systemview/Config/SEGGER_SYSVIEW_Config_FreeRTOS.c.obj CMakeFiles/freertos.dir/Systemview/OS/SEGGER_SYSVIEW_FreeRTOS.c.obj CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_SYSVIEW.c.obj CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT.c.obj CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_printf.c.obj CMakeFiles/freertos.dir/Systemview/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c.obj CMakeFiles/freertos.dir/Systemview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S.obj | FreeRTOS/libfreertos_kernel.a || FreeRTOS/libfreertos_kernel.a FreeRTOS/portable/freertos_kernel_port cmake/stm32cubemx/STM32_Drivers
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3
   LINK_LIBRARIES = FreeRTOS/libfreertos_kernel.a
   OBJECT_DIR = CMakeFiles/freertos.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/freertos.dir/
   TARGET_FILE = freertos.elf
-  TARGET_PDB = freertos.elf.dbg
+  TARGET_PDB = freertos.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -147,7 +234,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -156,7 +243,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/mod/Desktop/stm32/freertos/CMakeLists.txt
+# /home/mod/Desktop/stm32/Git_folder/freertos/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -168,155 +255,209 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_STM32_Drivers: phony || cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Core/Src/system_stm32f4xx.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Core/Src/system_stm32f4xx.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
-  DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj.d
+  DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
+  DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
+  OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c || cmake_object_order_depends_target_STM32_Drivers
   DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
   DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/Core/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/freertos/Drivers/CMSIS/Include
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
   OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
+  DEFINES = -DDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER
+  DEP_FILE = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/mod/Desktop/stm32/Git_folder/freertos/Drivers/CMSIS/Include
+  OBJECT_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src
+  TARGET_COMPILE_PDB = cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/
+  TARGET_PDB = ""
 
 
 
 #############################################
 # Object library STM32_Drivers
 
-build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
+build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 
 
 #############################################
 # Utility command for edit_cache
 
 build cmake/stm32cubemx/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/cmake/stm32cubemx && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/cmake/stm32cubemx && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -328,7 +469,7 @@ build cmake/stm32cubemx/edit_cache: phony cmake/stm32cubemx/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build cmake/stm32cubemx/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/cmake/stm32cubemx && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/cmake/stm32cubemx && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -337,7 +478,7 @@ build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuil
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/mod/Desktop/stm32/freertos/CMakeLists.txt
+# /home/mod/Desktop/stm32/Git_folder/freertos/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -349,61 +490,75 @@ build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuil
 
 build cmake_object_order_depends_target_freertos_kernel: phony || cmake_object_order_depends_target_freertos_kernel_port
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/croutine.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/croutine.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/croutine.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/croutine.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/croutine.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/event_groups.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/event_groups.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/event_groups.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/event_groups.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/event_groups.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/list.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/list.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/list.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/list.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/list.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/queue.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/queue.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/queue.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/queue.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/queue.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/stream_buffer.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/stream_buffer.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/stream_buffer.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/stream_buffer.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/stream_buffer.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/tasks.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/tasks.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/tasks.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/tasks.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/tasks.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
-build FreeRTOS/CMakeFiles/freertos_kernel.dir/timers.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/timers.c || cmake_object_order_depends_target_freertos_kernel
+build FreeRTOS/CMakeFiles/freertos_kernel.dir/timers.c.obj: C_COMPILER__freertos_kernel_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/timers.c || cmake_object_order_depends_target_freertos_kernel
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/CMakeFiles/freertos_kernel.dir/timers.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   OBJECT_FILE_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
 
 # =============================================================================
@@ -418,15 +573,16 @@ build FreeRTOS/libfreertos_kernel.a: C_STATIC_LIBRARY_LINKER__freertos_kernel_De
   OBJECT_DIR = FreeRTOS/CMakeFiles/freertos_kernel.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = FreeRTOS/CMakeFiles/freertos_kernel.dir/freertos_kernel.pdb
   TARGET_FILE = FreeRTOS/libfreertos_kernel.a
-  TARGET_PDB = freertos_kernel.a.dbg
+  TARGET_PDB = FreeRTOS/libfreertos_kernel.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build FreeRTOS/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -438,7 +594,7 @@ build FreeRTOS/edit_cache: phony FreeRTOS/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build FreeRTOS/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -447,7 +603,7 @@ build FreeRTOS/rebuild_cache: phony FreeRTOS/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/mod/Desktop/stm32/freertos/FreeRTOS/CMakeLists.txt
+# /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/CMakeLists.txt
 # =============================================================================
 
 
@@ -455,7 +611,7 @@ build FreeRTOS/rebuild_cache: phony FreeRTOS/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build FreeRTOS/include/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS/include && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -467,7 +623,7 @@ build FreeRTOS/include/edit_cache: phony FreeRTOS/include/CMakeFiles/edit_cache.
 # Utility command for rebuild_cache
 
 build FreeRTOS/include/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS/include && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -476,7 +632,7 @@ build FreeRTOS/include/rebuild_cache: phony FreeRTOS/include/CMakeFiles/rebuild_
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/mod/Desktop/stm32/freertos/FreeRTOS/CMakeLists.txt
+# /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -488,13 +644,15 @@ build FreeRTOS/include/rebuild_cache: phony FreeRTOS/include/CMakeFiles/rebuild_
 
 build cmake_object_order_depends_target_freertos_kernel_port: phony || FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir
 
-build FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir/GCC/ARM_CM4F/port.c.obj: C_COMPILER__freertos_kernel_port_unscanned_Debug /home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F/port.c || cmake_object_order_depends_target_freertos_kernel_port
+build FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir/GCC/ARM_CM4F/port.c.obj: C_COMPILER__freertos_kernel_port_unscanned_Debug /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F/port.c || cmake_object_order_depends_target_freertos_kernel_port
   DEFINES = -DprojCOVERAGE_TEST=0
   DEP_FILE = FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir/GCC/ARM_CM4F/port.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -I/home/mod/Desktop/stm32/freertos/FreeRTOS/portable/GCC/ARM_CM4F -I/home/mod/Desktop/stm32/freertos/FreeRTOS/include/. -isystem /home/mod/Desktop/stm32/freertos/Core/Inc
+  INCLUDES = -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable/GCC/ARM_CM4F -I/home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include/. -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Core/Inc -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/Config -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/OS -isystem /home/mod/Desktop/stm32/Git_folder/freertos/Systemview/SEGGER
   OBJECT_DIR = FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir
   OBJECT_FILE_DIR = FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir/GCC/ARM_CM4F
+  TARGET_COMPILE_PDB = FreeRTOS/portable/CMakeFiles/freertos_kernel_port.dir/
+  TARGET_PDB = ""
 
 
 
@@ -508,7 +666,7 @@ build FreeRTOS/portable/freertos_kernel_port: phony FreeRTOS/portable/CMakeFiles
 # Utility command for edit_cache
 
 build FreeRTOS/portable/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS/portable && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable && /opt/st/stm32cubeclt_1.18.0/CMake/bin/ccmake -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -520,7 +678,7 @@ build FreeRTOS/portable/edit_cache: phony FreeRTOS/portable/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build FreeRTOS/portable/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/mod/Desktop/stm32/freertos/FreeRTOS/portable && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  COMMAND = cd /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable && /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -546,35 +704,35 @@ build libfreertos_kernel.a: phony FreeRTOS/libfreertos_kernel.a
 # =============================================================================
 
 #############################################
-# Folder: /home/mod/Desktop/stm32/freertos
+# Folder: /home/mod/Desktop/stm32/Git_folder/freertos
 
 build all: phony freertos.elf cmake/stm32cubemx/all FreeRTOS/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/mod/Desktop/stm32/freertos/FreeRTOS
+# Folder: /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS
 
 build FreeRTOS/all: phony FreeRTOS/libfreertos_kernel.a FreeRTOS/include/all FreeRTOS/portable/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/mod/Desktop/stm32/freertos/FreeRTOS/include
+# Folder: /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/include
 
 build FreeRTOS/include/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/mod/Desktop/stm32/freertos/FreeRTOS/portable
+# Folder: /home/mod/Desktop/stm32/Git_folder/freertos/FreeRTOS/portable
 
 build FreeRTOS/portable/all: phony FreeRTOS/portable/freertos_kernel_port
 
 # =============================================================================
 
 #############################################
-# Folder: /home/mod/Desktop/stm32/freertos/cmake/stm32cubemx
+# Folder: /home/mod/Desktop/stm32/Git_folder/freertos/cmake/stm32cubemx
 
 build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
 
@@ -585,14 +743,14 @@ build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeASMCompiler.cmake CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake CMakeLists.txt FreeRTOS/CMakeLists.txt FreeRTOS/include/CMakeLists.txt FreeRTOS/portable/CMakeLists.txt cmake/gcc-arm-none-eabi.cmake cmake/stm32cubemx/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystem.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestASMCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeASMCompiler.cmake CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake CMakeLists.txt FreeRTOS/CMakeLists.txt FreeRTOS/include/CMakeLists.txt FreeRTOS/portable/CMakeLists.txt cmake/gcc-arm-none-eabi.cmake cmake/stm32cubemx/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeASMCompiler.cmake CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake CMakeLists.txt FreeRTOS/CMakeLists.txt FreeRTOS/include/CMakeLists.txt FreeRTOS/portable/CMakeLists.txt cmake/gcc-arm-none-eabi.cmake cmake/stm32cubemx/CMakeLists.txt: phony
+build /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeASMInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCCompilerABI.c /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystem.cmake.in /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestASMCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-ASM.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /opt/st/stm32cubeclt_1.18.0/CMake/share/cmake-3.28/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeASMCompiler.cmake CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake CMakeLists.txt FreeRTOS/CMakeLists.txt FreeRTOS/include/CMakeLists.txt FreeRTOS/portable/CMakeLists.txt cmake/gcc-arm-none-eabi.cmake cmake/stm32cubemx/CMakeLists.txt: phony
 
 
 #############################################

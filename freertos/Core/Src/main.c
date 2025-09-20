@@ -18,19 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "timers.h"
-#include <stdio.h>
-
-/*dwt enable*/
-#define DWT_CTRL    *((volatile uint32_t*)0xE0001000)
-//sysview apis
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
@@ -39,7 +29,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define DWT_CTRL    (*(volatile uint32_t*)0xE0001000)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -48,6 +38,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+RTC_HandleTypeDef hrtc;
+
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
@@ -58,15 +50,24 @@ UART_HandleTypeDef huart2;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_RTC_Init(void);
 /* USER CODE BEGIN PFP */
-void task_1( void * pvParameters);
-void task_2( void * pvParameters);
+void LED_callback(TimerHandle_t xTimer);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-TaskHandle_t handle_1 = NULL;
-TaskHandle_t handle_2 = NULL;
+TaskHandle_t handle_menu_task = NULL;
+TaskHandle_t handle_cmd_task = NULL;
+TaskHandle_t handle_print_task = NULL;
+TaskHandle_t handle_LED_task = NULL;
+TaskHandle_t handle_RTC_task = NULL;
+
+QueueHandle_t xQueue1, xQueue2;
+TimerHandle_t xTimers[ NUM_TIMERS ];
+
+volatile uint8_t data;
+state_t curr_state = MainMenu;
 /* USER CODE END 0 */
 
 /**
@@ -99,17 +100,38 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
-  
+  MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-  UBaseType_t priority = 1;
-
   DWT_CTRL |= ( 1 << 0);
+
+  UBaseType_t priority = 1;
+  BaseType_t xReturned;
  
   SEGGER_SYSVIEW_Conf();     //used with OS integration to allow easier initialization of SystemView and the OS SystemView interface.
   SEGGER_SYSVIEW_Start();
   
-  xTaskCreate(task_1,"task1",100,(void*)1,priority,&handle_1);
-  xTaskCreate(task_2,"task2",100,(void*)1,priority,&handle_2);
+  xReturned = xTaskCreate(menu_task,"menu_task",100,NULL,priority,&handle_menu_task);
+  configASSERT (xReturned == pdPASS);
+  xReturned = xTaskCreate(cmd_task,"cmd_task",100,NULL,priority,&handle_cmd_task);
+  configASSERT (xReturned == pdPASS);
+  xReturned = xTaskCreate(print_task,"print_task",100,NULL,priority,&handle_print_task);
+  configASSERT (xReturned == pdPASS);
+  xReturned = xTaskCreate(LED_task,"LED_task",100,NULL,priority,&handle_LED_task);
+  configASSERT (xReturned == pdPASS);
+  xReturned = xTaskCreate(RTC_task,"RTC_task",100,NULL,priority,&handle_RTC_task);
+  configASSERT (xReturned == pdPASS);
+  
+  xQueue1 = xQueueCreate(10, sizeof( char ));
+  configASSERT(xQueue1 != NULL);
+  xQueue2 = xQueueCreate(10, sizeof(char*)); //queue to hold pointer to items
+  configASSERT(xQueue2 != NULL);
+   
+  for (uint8_t i=0; i<NUM_TIMERS; i++)
+  {
+    xTimers[i] = xTimerCreate("LED_timer", 900*i+100, pdTRUE,(void*)(i+1), LED_callback);
+  }
+ 
+  HAL_UART_Receive_IT(&huart2,(uint8_t*)&data, 1);
   vTaskStartScheduler();
   /* USER CODE END 2 */
 
@@ -140,9 +162,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;
@@ -167,6 +190,41 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief RTC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_RTC_Init(void)
+{
+
+  /* USER CODE BEGIN RTC_Init 0 */
+
+  /* USER CODE END RTC_Init 0 */
+
+  /* USER CODE BEGIN RTC_Init 1 */
+
+  /* USER CODE END RTC_Init 1 */
+
+  /** Initialize RTC Only
+  */
+  hrtc.Instance = RTC;
+  hrtc.Init.HourFormat = RTC_HOURFORMAT_12;
+  hrtc.Init.AsynchPrediv = 127;
+  hrtc.Init.SynchPrediv = 255;
+  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
+  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
+  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN RTC_Init 2 */
+
+  /* USER CODE END RTC_Init 2 */
+
 }
 
 /**
@@ -248,30 +306,48 @@ int __io_putchar(int ch)
 	return ch;
 }
 
-void task_1( void * pvParameters){
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 
-configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
-const char* string = " task_1\n";
- 
-  while(1){
+  uint8_t temp;
 
-    SEGGER_SYSVIEW_PrintfTarget(string); 
-    xTaskNotifyGive(handle_2);
-    vTaskDelay(pdMS_TO_TICKS(100));
-
+  if((xQueueIsQueueFullFromISR(xQueue1)) != pdTRUE)
+  {
+    xQueueSendFromISR( xQueue1, (void*)&data,NULL);
   }
+
+  else
+  {
+    if(data=='\n')
+    {
+      xQueueReceiveFromISR(xQueue1,(void*)&temp,NULL);
+      xQueueSendFromISR( xQueue1, (void*)&data, NULL );
+    }
+  }
+
+  if(data =='\n')
+  {
+    xTaskNotifyFromISR(handle_cmd_task,0, eNoAction,NULL);
+  }
+
+  HAL_UART_Receive_IT(&huart2,(uint8_t*)&data, 1);
 }
 
-void task_2( void * pvParameters){
- 
-  configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
-  const char* str = " task_2\n";
- 
-  while(1){
+void LED_callback(TimerHandle_t xTimer){
 
-    ulTaskNotifyTake(pdTRUE,portMAX_DELAY);
-    SEGGER_SYSVIEW_PrintfTarget(str);   
-    vTaskDelay(pdMS_TO_TICKS(100));
+  uint32_t id;
+  id = (uint32_t)pvTimerGetTimerID( xTimer );
+
+  switch (id)
+  {
+    case 1:
+      LED_control_1();
+    break;
+    case 2:
+      LED_control_2();
+    break;
+    default:
+    break;
+
   }
 
 }

@@ -45,15 +45,6 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
 )
 
-# Add include paths
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
-    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/Config
-    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/OS
-    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/SEGGER
-   
-)
-
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
@@ -65,7 +56,16 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/SEGGER/SEGGER_RTT_printf.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/SEGGER/SEGGER_RTT_ASM_ARMv7M.S
+    ${CMAKE_CURRENT_SOURCE_DIR}/Core/Src/tasks_handle.c
+)
 
+# Add include paths
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user defined include paths
+    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/Config
+    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/OS
+    ${CMAKE_CURRENT_SOURCE_DIR}/Systemview/SEGGER
+   
 )
 
 # Add project symbols (macros)
@@ -97,7 +97,7 @@ add_subdirectory(FreeRTOS)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
+
+    # Add user defined libraries
     freertos_kernel
 )
-
-

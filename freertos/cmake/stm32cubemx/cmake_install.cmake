@@ -1,4 +1,4 @@
-# Install script for directory: /home/mod/Desktop/stm32/freertos/cmake/stm32cubemx
+# Install script for directory: /home/mod/Desktop/stm32/Git_folder/freertos/cmake/stm32cubemx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

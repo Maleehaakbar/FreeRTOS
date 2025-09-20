@@ -35,7 +35,7 @@ rule C_COMPILER__freertos_unscanned_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__freertos_Debug
-  command = $PRE_LINK && /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/mod/Desktop/stm32/freertos/STM32F401XX_FLASH.ld" --specs=nano.specs -Wl,-Map=freertos.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  command = $PRE_LINK && /opt/st/stm32cubeclt_1.18.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "/home/mod/Desktop/stm32/Git_folder/freertos/STM32F401XX_FLASH.ld" --specs=nano.specs -Wl,-Map=freertos.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -91,7 +91,7 @@ rule C_COMPILER__freertos_kernel_port_unscanned_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/freertos -B/home/mod/Desktop/stm32/freertos
+  command = /opt/st/stm32cubeclt_1.18.0/CMake/bin/cmake --regenerate-during-build -S/home/mod/Desktop/stm32/Git_folder/freertos -B/home/mod/Desktop/stm32/Git_folder/freertos
   description = Re-running CMake...
   generator = 1
 
