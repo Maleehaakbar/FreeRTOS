@@ -24,6 +24,9 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timers.h"
+#include "semphr.h"
+#include <stdlib.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +50,9 @@
 /* USER CODE BEGIN PV */
 TaskHandle_t handle_1 = NULL;
 TaskHandle_t handle_2 = NULL;
+SemaphoreHandle_t xSemaphore;
+xQueueHandle xWorkQueue;
+char msg[100]={0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,15 +99,19 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  UBaseType_t priority = 1;
+  UBaseType_t priority_task1 = 3;
+  UBaseType_t priority_task2 = 1;
 
   DWT_CTRL |= ( 1 << 0);
 
   SEGGER_UART_init(250000);
   SEGGER_SYSVIEW_Conf();
 
-  xTaskCreate(task_1,"task1",100,(void*)1,priority,&handle_1);
-  xTaskCreate(task_2,"task2",100,(void*)1,priority,&handle_2);
+  xSemaphore = xSemaphoreCreateBinary();
+  xWorkQueue = xQueueCreate(1,sizeof(uint16_t));
+
+  xTaskCreate(task_1,"task1",256,(void*)1,priority_task1,&handle_1);
+  xTaskCreate(task_2,"task2",256,(void*)1,priority_task2,&handle_2);
   vTaskStartScheduler();
   /* USER CODE END 2 */
 
@@ -216,34 +226,21 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void IRQ_handle(void){
-  
-  traceISR_ENTER();
-  BaseType_t xHigherPriorityTaskWoken;
-  xHigherPriorityTaskWoken =  pdFALSE;
-  if(handle_1 !=NULL){
-  xTaskNotifyFromISR(handle_1,0,eNoAction,&xHigherPriorityTaskWoken);
-  }
-  if (xHigherPriorityTaskWoken) {
-    SEGGER_SYSVIEW_PrintfTarget("About to yield from ISR\n");
-}
-  portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
-  traceISR_EXIT();
-  
-}
 
 void task_1( void * pvParameters){
 
 configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
 const char* string = " task_1\n";
-const char* str_test = " task_test\n";
- 
+uint16_t workid;
+xSemaphoreGive(xSemaphore);
+
   while(1){
-    SEGGER_SYSVIEW_PrintfTarget(str_test); 
-    xTaskNotifyWait(0,0,NULL, portMAX_DELAY);
+
     SEGGER_SYSVIEW_PrintfTarget(string); 
-    xTaskNotify(handle_2, 1<<0, eSetBits);
-    vTaskDelay(pdMS_TO_TICKS(100));
+    workid = (rand() & 0x1FF);
+    xQueueSendToBack(xWorkQueue,&workid,portMAX_DELAY);
+    xSemaphoreGive(xSemaphore);         //used for synchronization/notification to other task
+    taskYIELD();
 
   }
 }
@@ -252,15 +249,25 @@ void task_2( void * pvParameters){
  
   configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
   const char* str = " task_2\n";
-  uint32_t notify_value;
+  const char* queue_str = "Data not received\n";
+  uint16_t work_id;
+  portBASE_TYPE xStatus;
   while(1){
-
-    xTaskNotifyWait(0,ULONG_MAX,&notify_value, portMAX_DELAY);
-
-    if((notify_value & 0x01) == 0x1){
+    
     SEGGER_SYSVIEW_PrintfTarget(str);   
+    xSemaphoreTake(xSemaphore,portMAX_DELAY);     
+    xStatus = xQueueReceive(xWorkQueue,&work_id,0);
+    if(xStatus == pdPASS)
+    {
+      sprintf(msg, "ID is %d", work_id);
+      SEGGER_SYSVIEW_PrintfTarget(msg);  
+      vTaskDelay(pdMS_TO_TICKS(1000)); 
     }
-    vTaskDelay(pdMS_TO_TICKS(100));
+  
+    else
+    {
+       SEGGER_SYSVIEW_PrintfTarget(queue_str); 
+    }
   }
 
 }
