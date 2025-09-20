@@ -49,9 +49,7 @@
 
 /* USER CODE BEGIN PV */
 TaskHandle_t handle_1 = NULL;
-TaskHandle_t handle_2 = NULL;
 SemaphoreHandle_t xSemaphore;
-xQueueHandle xWorkQueue;
 char msg[100]={0};
 /* USER CODE END PV */
 
@@ -61,7 +59,6 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 extern  void SEGGER_UART_init(uint32_t);
 void task_1( void * pvParameters);
-void task_2( void * pvParameters);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -100,18 +97,14 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   UBaseType_t priority_task1 = 3;
-  UBaseType_t priority_task2 = 1;
 
   DWT_CTRL |= ( 1 << 0);
 
   SEGGER_UART_init(250000);
   SEGGER_SYSVIEW_Conf();
 
-  xSemaphore = xSemaphoreCreateBinary();
-  xWorkQueue = xQueueCreate(1,sizeof(uint16_t));
-
+  xSemaphore = xSemaphoreCreateCounting(5,0);
   xTaskCreate(task_1,"task1",256,(void*)1,priority_task1,&handle_1);
-  xTaskCreate(task_2,"task2",256,(void*)1,priority_task2,&handle_2);
   vTaskStartScheduler();
   /* USER CODE END 2 */
 
@@ -226,51 +219,33 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void IRQ_handle()
+{ 
+  traceISR_ENTER();
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  SEGGER_SYSVIEW_PrintfTarget("IRQ"); 
+  xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
+  xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
+  xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
+  portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
+  traceISR_EXIT();
+
+}
 
 void task_1( void * pvParameters){
 
 configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
 const char* string = " task_1\n";
-uint16_t workid;
-xSemaphoreGive(xSemaphore);
 
   while(1){
 
     SEGGER_SYSVIEW_PrintfTarget(string); 
-    workid = (rand() & 0x1FF);
-    xQueueSendToBack(xWorkQueue,&workid,portMAX_DELAY);
-    xSemaphoreGive(xSemaphore);         //used for synchronization/notification to other task
-    taskYIELD();
-
+    xSemaphoreTake( xSemaphore, portMAX_DELAY );
+    sprintf(msg,"processing counting semaphore");
+    SEGGER_SYSVIEW_PrintfTarget(msg);
   }
 }
 
-void task_2( void * pvParameters){
- 
-  configASSERT( ( ( uint32_t ) pvParameters ) == 1 );
-  const char* str = " task_2\n";
-  const char* queue_str = "Data not received\n";
-  uint16_t work_id;
-  portBASE_TYPE xStatus;
-  while(1){
-    
-    SEGGER_SYSVIEW_PrintfTarget(str);   
-    xSemaphoreTake(xSemaphore,portMAX_DELAY);     
-    xStatus = xQueueReceive(xWorkQueue,&work_id,0);
-    if(xStatus == pdPASS)
-    {
-      sprintf(msg, "ID is %d", work_id);
-      SEGGER_SYSVIEW_PrintfTarget(msg);  
-      vTaskDelay(pdMS_TO_TICKS(1000)); 
-    }
-  
-    else
-    {
-       SEGGER_SYSVIEW_PrintfTarget(queue_str); 
-    }
-  }
-
-}
 /* USER CODE END 4 */
 
 /**
